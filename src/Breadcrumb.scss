@@ -1,0 +1,25 @@
+@import "../node_modules/tinper-bee-core/scss/minxin-variables";
+@import "../node_modules/tinper-bee-core/scss/minxin-mixins";
+
+.u-breadcrumb {
+	padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    li {
+    	display: inline-block;
+    }
+    a {
+    	color: $brand-info;
+    	text-decoration: none;
+    }
+    .active {
+    	color: #777;
+    }
+}
+.u-breadcrumb>li+li:before {
+    content: "/\A0";
+    padding: 0 5px;
+    color: #ccc;
+}
