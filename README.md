@@ -1,6 +1,6 @@
 # bee-breadcrumb
 [![npm version](https://img.shields.io/npm/v/bee-breadcrumb.svg)](https://www.npmjs.com/package/bee-breadcrumb)
-[![Build Status](https://img.shields.io/travis/tinper-bee/generator-tinper-bee/master.svg)](https://travis-ci.org/tinper-bee/bee-breadcrumb)
+[![Build Status](https://img.shields.io/travis/tinper-bee/bee-breadcrumb/master.svg)](https://travis-ci.org/tinper-bee/bee-breadcrumb)
 [![devDependency Status](https://img.shields.io/david/dev/tinper-bee/bee-breadcrumb.svg)](https://david-dm.org/tinper-bee/bee-breadcrumb#info=devDependencies)
 
 `Breadcrumb` 常用来指定当前页面位置，添加类`active`类激活Breadcrumb.Item.不要同时设置`active`和`href`,设置了`active`会将子元素渲染成`span`,覆盖`a`.
