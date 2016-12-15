@@ -12,28 +12,7 @@ const CARET = <i className="uf uf-chevronarrowdown"></i>;
 const CARETUP = <i className="uf uf-chevronarrowup"></i>;
 
 
-/**
- * @title Breadcrumb 
- * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。
- */
-class Demo1 extends Component {
-	render () {
-		return (
-			<Breadcrumb>
-			    <Breadcrumb.Item href="#">
-			      Home
-			    </Breadcrumb.Item>
-			    <Breadcrumb.Item href='http://getbootstrap.com/components/#breadcrumbs'>
-			      Library
-			    </Breadcrumb.Item>
-			    <Breadcrumb.Item active>
-			      Data
-			    </Breadcrumb.Item>
-			</Breadcrumb>
-		)
-	}
-}var DemoArray = [{"example":<Demo1 />,"title":" Breadcrumb ","code":"/**\n * @title Breadcrumb \n * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。\n */\nclass Demo1 extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<Breadcrumb>\n\t\t\t    <Breadcrumb.Item href=\"#\">\n\t\t\t      Home\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item href='http://getbootstrap.com/components/#breadcrumbs'>\n\t\t\t      Library\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item active>\n\t\t\t      Data\n\t\t\t    </Breadcrumb.Item>\n\t\t\t</Breadcrumb>\n\t\t)\n\t}\n}","desc":" Breadcrumb.Item定义子面包，`active`"}]
-
+{demolist}
 
 class Demo extends Component {
     constructor(props){
