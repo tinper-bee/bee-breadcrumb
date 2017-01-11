@@ -9,7 +9,7 @@ class Demo1 extends Component {
 			    <Breadcrumb.Item href="#">
 			      Home
 			    </Breadcrumb.Item>
-			    <Breadcrumb.Item href='http://getbootstrap.com/components/#breadcrumbs'>
+			    <Breadcrumb.Item href='#'>
 			      Library
 			    </Breadcrumb.Item>
 			    <Breadcrumb.Item active>
