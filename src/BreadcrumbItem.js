@@ -29,9 +29,10 @@ class BreadcrumbItem extends React.Component {
 
     return (
       <li className={classNames(className, { active })}>
-        {active ?
-          <span {...props} /> :
-          <a {...props} {...linkProps} />
+        {href ?
+          
+          <a {...props} {...linkProps} />:
+          <span {...props} />
         }
       </li>
     );

@@ -9,7 +9,7 @@ class Demo1 extends Component {
 			    <Breadcrumb.Item href="#">
 			      Home
 			    </Breadcrumb.Item>
-			    <Breadcrumb.Item href='#'>
+			    <Breadcrumb.Item>
 			      Library
 			    </Breadcrumb.Item>
 			    <Breadcrumb.Item active>
