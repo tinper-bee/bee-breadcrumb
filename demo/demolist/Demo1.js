@@ -2,7 +2,11 @@
  * @title Breadcrumb 
  * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。
  */
-class Demo1 extends Component {
+
+import React, { Component } from 'react';
+import Breadcrumb from '../../src';
+
+export default class Demo1 extends Component {
 	render () {
 		return (
 			<Breadcrumb>
