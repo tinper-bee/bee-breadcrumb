@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import Breadcrumb from '../../src';
 
-export default class Demo1 extends Component {
+class Demo1 extends Component {
 	render () {
 		return (
 			<Breadcrumb>
@@ -23,3 +23,5 @@ export default class Demo1 extends Component {
 		)
 	}
 }
+
+export default Demo1;
