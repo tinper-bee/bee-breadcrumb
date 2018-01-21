@@ -62,10 +62,6 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _src = __webpack_require__(64);
-	
-	var _src2 = _interopRequireDefault(_src);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
@@ -80,7 +76,7 @@
 	
 	var CARETUP = _react2['default'].createElement('i', { className: 'uf uf-arrow-up' });
 	
-	var Demo1 = __webpack_require__(67);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " Breadcrumb ", "code": "/**\n * @title Breadcrumb \n * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。\n */\n\nimport React, { Component } from 'react';\nimport Breadcrumb from 'bee-breadcrumb';\n\nclass Demo1 extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<Breadcrumb>\n\t\t\t    <Breadcrumb.Item href=\"#\">\n\t\t\t      Home\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item>\n\t\t\t      Library\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item active>\n\t\t\t      Data\n\t\t\t    </Breadcrumb.Item>\n\t\t\t</Breadcrumb>\n\t\t)\n\t}\n}\n\n", "desc": " Breadcrumb.Item定义子面包，`active`参数定义当前状态。" }];
+	var Demo1 = __webpack_require__(64);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " Breadcrumb ", "code": "/**\n * @title Breadcrumb \n * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。\n */\n\nimport React, { Component } from 'react';\nimport { Breadcrumb } from 'tinper-bee';\n\nclass Demo1 extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<Breadcrumb>\n\t\t\t    <Breadcrumb.Item href=\"#\">\n\t\t\t      Home\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item>\n\t\t\t      Library\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item active>\n\t\t\t      Data\n\t\t\t    </Breadcrumb.Item>\n\t\t\t</Breadcrumb>\n\t\t)\n\t}\n}\n\n", "desc": " Breadcrumb.Item定义子面包，`active`参数定义当前状态。" }];
 	
 	var Demo = function (_Component) {
 	    _inherits(Demo, _Component);
@@ -106,16 +102,22 @@
 	            title = _props.title,
 	            example = _props.example,
 	            code = _props.code,
-	            desc = _props.desc;
+	            desc = _props.desc,
+	            scss_code = _props.scss_code;
 	
 	        var caret = this.state.open ? CARETUP : CARET;
 	        var text = this.state.open ? "隐藏代码" : "查看代码";
 	
-	        var footer = _react2['default'].createElement(
-	            _beeButton2['default'],
-	            { shape: 'block', onClick: this.handleClick },
-	            caret,
-	            text
+	        var header = _react2['default'].createElement(
+	            'div',
+	            null,
+	            example,
+	            _react2['default'].createElement(
+	                _beeButton2['default'],
+	                { style: { "marginTop": "10px" }, shape: 'block', onClick: this.handleClick },
+	                caret,
+	                text
+	            )
 	        );
 	        return _react2['default'].createElement(
 	            _beeLayout.Col,
@@ -132,7 +134,8 @@
 	            ),
 	            _react2['default'].createElement(
 	                _beePanel.Panel,
-	                { collapsible: true, expanded: this.state.open, colors: 'bordered', header: example, footer: footer, footerStyle: { padding: 0, borderColor: "transparent" } },
+	                { collapsible: true, headerContent: true, expanded: this.state.open, colors: 'bordered', header: header,
+	                    footerStyle: { padding: 0 } },
 	                _react2['default'].createElement(
 	                    'pre',
 	                    null,
@@ -141,7 +144,16 @@
 	                        { className: 'hljs javascript' },
 	                        code
 	                    )
-	                )
+	                ),
+	                !!scss_code ? _react2['default'].createElement(
+	                    'pre',
+	                    null,
+	                    _react2['default'].createElement(
+	                        'code',
+	                        { className: 'hljs css' },
+	                        scss_code
+	                    )
+	                ) : null
 	            )
 	        );
 	    };
@@ -164,7 +176,8 @@
 	            null,
 	            DemoArray.map(function (child, index) {
 	
-	                return _react2['default'].createElement(Demo, { example: child.example, title: child.title, code: child.code, desc: child.desc, key: index });
+	                return _react2['default'].createElement(Demo, { example: child.example, title: child.title, code: child.code, scss_code: child.scss_code,
+	                    desc: child.desc, key: index });
 	            })
 	        );
 	    };
@@ -2573,14 +2586,17 @@
 
 	"use strict";
 	
-	(exports.__esModule = true, exports.default = splitComponentProps, function _objectEntries(obj) {
+	exports.__esModule = true;
+	exports.default = splitComponentProps;
+	function _objectEntries(obj) {
 	  var entries = [];
 	  var keys = Object.keys(obj);
 	
-	  for (var k = 0; k < keys.length; ++k) entries.push([keys[k], obj[keys[k]]]);
+	  for (var k = 0; k < keys.length; ++k) {
+	    entries.push([keys[k], obj[keys[k]]]);
+	  }return entries;
+	}
 	
-	  return entries;
-	})
 	/**
 	 * 分割要传入父元素和子元素的props
 	 * @param  {[object]} props     传入的属性
@@ -6187,10 +6203,78 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _src = __webpack_require__(65);
+	
+	var _src2 = _interopRequireDefault(_src);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @title Breadcrumb 
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	
+	var Demo1 = function (_Component) {
+		_inherits(Demo1, _Component);
+	
+		function Demo1() {
+			_classCallCheck(this, Demo1);
+	
+			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+		}
+	
+		Demo1.prototype.render = function render() {
+			return _react2['default'].createElement(
+				_src2['default'],
+				null,
+				_react2['default'].createElement(
+					_src2['default'].Item,
+					{ href: '#' },
+					'Home'
+				),
+				_react2['default'].createElement(
+					_src2['default'].Item,
+					null,
+					'Library'
+				),
+				_react2['default'].createElement(
+					_src2['default'].Item,
+					{ active: true },
+					'Data'
+				)
+			);
+		};
+	
+		return Demo1;
+	}(_react.Component);
+	
+	exports['default'] = Demo1;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	
-	var _Breadcrumb = __webpack_require__(65);
+	var _Breadcrumb = __webpack_require__(66);
 	
 	var _Breadcrumb2 = _interopRequireDefault(_Breadcrumb);
 
@@ -6200,7 +6284,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6219,7 +6303,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _BreadcrumbItem = __webpack_require__(66);
+	var _BreadcrumbItem = __webpack_require__(67);
 	
 	var _BreadcrumbItem2 = _interopRequireDefault(_BreadcrumbItem);
 	
@@ -6268,7 +6352,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6356,74 +6440,6 @@
 	BreadcrumbItem.defaultProps = defaultProps;
 	
 	exports['default'] = BreadcrumbItem;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _react = __webpack_require__(4);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _src = __webpack_require__(64);
-	
-	var _src2 = _interopRequireDefault(_src);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @title Breadcrumb 
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-	
-	var Demo1 = function (_Component) {
-		_inherits(Demo1, _Component);
-	
-		function Demo1() {
-			_classCallCheck(this, Demo1);
-	
-			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
-		}
-	
-		Demo1.prototype.render = function render() {
-			return _react2['default'].createElement(
-				_src2['default'],
-				null,
-				_react2['default'].createElement(
-					_src2['default'].Item,
-					{ href: '#' },
-					'Home'
-				),
-				_react2['default'].createElement(
-					_src2['default'].Item,
-					null,
-					'Library'
-				),
-				_react2['default'].createElement(
-					_src2['default'].Item,
-					{ active: true },
-					'Data'
-				)
-			);
-		};
-	
-		return Demo1;
-	}(_react.Component);
-	
-	exports['default'] = Demo1;
 	module.exports = exports['default'];
 
 /***/ })
