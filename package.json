@@ -1,6 +1,6 @@
 {
  "name": "bee-breadcrumb",
- "version": "1.0.0",
+ "version": "1.0.1",
  "description": "breadcrumb ui component for react",
  "keywords": [
   "react",
@@ -33,7 +33,6 @@
   "coveralls": "bee-tools run coverage"
  },
  "dependencies": {
-  "bee-button": "latest",
   "classnames": "^2.2.5",
   "tinper-bee-core": "latest"
  },
