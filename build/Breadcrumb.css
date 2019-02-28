@@ -8,9 +8,9 @@
   border-radius: 4px; }
   .u-breadcrumb li {
     display: inline-block;
-    color: rgb(30,136,229); }
+    color: rgb(245, 60, 50); }
   .u-breadcrumb a {
-    color: rgb(30,136,229);
+    color: rgb(245, 60, 50);
     text-decoration: none; }
   .u-breadcrumb .active {
     color: #777; }
