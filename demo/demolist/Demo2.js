@@ -1,20 +1,22 @@
 /**
- * @title 基础用法 
- * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。
+ * @title 带有图标的 
+ * @description 图标放在文字前面。
  */
 
 import React, { Component } from 'react';
+import Icon from 'bee-icon';
 import Breadcrumb from '../../src';
 
-class Demo1 extends Component {
+class Demo2 extends Component {
 	render () {
 		return (
 			<Breadcrumb>
 			    <Breadcrumb.Item href="#">
-			      Home
+                    <Icon type="uf-home"></Icon>
 			    </Breadcrumb.Item>
 			    <Breadcrumb.Item>
-			      Library
+                    <Icon type="uf-caven"></Icon>
+                    <span>Application List</span>
 			    </Breadcrumb.Item>
 			    <Breadcrumb.Item active>
 			      Data
@@ -24,4 +26,4 @@ class Demo1 extends Component {
 	}
 }
 
-export default Demo1;
+export default Demo2;
