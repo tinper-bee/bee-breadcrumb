@@ -10,7 +10,7 @@ const CARET = <i className="uf uf-arrow-down"></i>;
 const CARETUP = <i className="uf uf-arrow-up"></i>;
 
 
-var Demo1 = require("./demolist/Demo1");var Demo2 = require("./demolist/Demo2");var DemoArray = [{"example":<Demo1 />,"title":" 基础用法 ","code":"/**\r\n * @title 基础用法 \r\n * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。\r\n */\r\n\r\nimport React, { Component } from 'react';\r\nimport { Breadcrumb } from 'tinper-bee';\r\n\r\nclass Demo1 extends Component {\r\n\trender () {\r\n\t\treturn (\r\n\t\t\t<Breadcrumb>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n\t\t\t      Home\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item>\r\n\t\t\t      Library\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item active>\r\n\t\t\t      Data\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t</Breadcrumb>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n","desc":" Breadcrumb.Item定义子面包，`active`参数定义当前状态。"},{"example":<Demo2 />,"title":" 带有图标的 ","code":"/**\r\n * @title 带有图标的 \r\n * @description 图标放在文字前面。\r\n */\r\n\r\nimport React, { Component } from 'react';\r\n\nimport { Breadcrumb, Icon } from 'tinper-bee';\r\n\r\nclass Demo2 extends Component {\r\n\trender () {\r\n\t\treturn (\r\n\t\t\t<Breadcrumb>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n                    <Icon type=\"uf-home\"></Icon>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n                    <Icon type=\"uf-caven\"></Icon>\r\n                    <span>Application List</span>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item active>\r\n\t\t\t      Data\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t</Breadcrumb>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n","desc":" 图标放在文字前面。"}]
+var Demo1 = require("./demolist/Demo1");var Demo2 = require("./demolist/Demo2");var DemoArray = [{"example":<Demo1 />,"title":" 基础用法 ","code":"/**\n * @title 基础用法 \n * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。\n */\n\nimport React, { Component } from 'react';\nimport { Breadcrumb } from 'tinper-bee';\n\nclass Demo1 extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<Breadcrumb>\n\t\t\t    <Breadcrumb.Item href=\"#\">\n\t\t\t      Home\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item>\n\t\t\t      Library\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item active>\n\t\t\t      Data\n\t\t\t    </Breadcrumb.Item>\n\t\t\t</Breadcrumb>\n\t\t)\n\t}\n}\n\n","desc":" Breadcrumb.Item定义子面包，`active`参数定义当前状态。"},{"example":<Demo2 />,"title":" 带有图标的 ","code":"/**\n * @title 带有图标的 \n * @description 图标放在文字前面。\n */\n\nimport React, { Component } from 'react';\nimport { Breadcrumb, Icon } from 'tinper-bee';\n\nclass Demo2 extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<Breadcrumb>\n\t\t\t    <Breadcrumb.Item href=\"#\">\n                    <Icon type=\"uf-home\"></Icon>\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item href=\"#\">\n                    <Icon type=\"uf-caven\"></Icon>\n                    <span>Application List</span>\n\t\t\t    </Breadcrumb.Item>\n\t\t\t    <Breadcrumb.Item active>\n\t\t\t      Data\n\t\t\t    </Breadcrumb.Item>\n\t\t\t</Breadcrumb>\n\t\t)\n\t}\n}\n\n","desc":" 图标放在文字前面。"}]
 
 
 class Demo extends Component {
@@ -41,7 +41,7 @@ class Demo extends Component {
             </div>
         );
         return (
-            <Col md={12}>
+            <Col md={12} id={title.trim()} >
                 <h3>{title}</h3>
                 <p>{desc}</p>
                 <Panel collapsible headerContent expanded={this.state.open} colors='bordered' header={header}
