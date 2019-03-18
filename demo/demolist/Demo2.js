@@ -14,7 +14,7 @@ class Demo2 extends Component {
 			    <Breadcrumb.Item href="#">
                     <Icon type="uf-home"></Icon>
 			    </Breadcrumb.Item>
-			    <Breadcrumb.Item>
+			    <Breadcrumb.Item href="#">
                     <Icon type="uf-caven"></Icon>
                     <span>Application List</span>
 			    </Breadcrumb.Item>
