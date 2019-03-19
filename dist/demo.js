@@ -76,7 +76,7 @@
 	
 	var CARETUP = _react2['default'].createElement('i', { className: 'uf uf-arrow-up' });
 	
-	var Demo1 = __webpack_require__(84);var Demo2 = __webpack_require__(88);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 基础用法 ", "code": "/**\r\n * @title 基础用法 \r\n * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。\r\n */\r\n\r\nimport React, { Component } from 'react';\r\nimport { Breadcrumb } from 'tinper-bee';\r\n\r\nclass Demo1 extends Component {\r\n\trender () {\r\n\t\treturn (\r\n\t\t\t<Breadcrumb>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n\t\t\t      Home\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item>\r\n\t\t\t      Library\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item active>\r\n\t\t\t      Data\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t</Breadcrumb>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " Breadcrumb.Item定义子面包，`active`参数定义当前状态。" }, { "example": _react2['default'].createElement(Demo2, null), "title": " 带有图标的 ", "code": "/**\r\n * @title 带有图标的 \r\n * @description 图标放在文字前面。\r\n */\r\n\r\nimport React, { Component } from 'react';\r\n\nimport { Breadcrumb, Icon } from 'tinper-bee';\r\n\r\nclass Demo2 extends Component {\r\n\trender () {\r\n\t\treturn (\r\n\t\t\t<Breadcrumb>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n                    <Icon type=\"uf-home\"></Icon>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n                    <Icon type=\"uf-caven\"></Icon>\r\n                    <span>Application List</span>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item active>\r\n\t\t\t      Data\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t</Breadcrumb>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 图标放在文字前面。" }];
+	var Demo1 = __webpack_require__(84);var Demo2 = __webpack_require__(88);var Demo3 = __webpack_require__(91);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 基础用法 ", "code": "/**\r\n * @title 基础用法 \r\n * @description Breadcrumb.Item定义子面包，`active`参数定义当前状态。\r\n */\r\n\r\nimport React, { Component } from 'react';\r\nimport { Breadcrumb } from 'tinper-bee';\r\n\r\nclass Demo1 extends Component {\r\n\trender () {\r\n\t\treturn (\r\n\t\t\t<Breadcrumb>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n\t\t\t      Home\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item>\r\n\t\t\t      Library\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item active>\r\n\t\t\t      Data\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t</Breadcrumb>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " Breadcrumb.Item定义子面包，`active`参数定义当前状态。" }, { "example": _react2['default'].createElement(Demo2, null), "title": " 图标 ", "code": "/**\r\n * @title 图标 \r\n * @description 使用Icon图标组件。\r\n */\r\n\r\nimport React, { Component } from 'react';\r\n\nimport { Breadcrumb, Icon } from 'tinper-bee';\r\n\r\nclass Demo2 extends Component {\r\n\trender () {\r\n\t\treturn (\r\n\t\t\t<Breadcrumb>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n                    <Icon type=\"uf-home\"></Icon>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n                    <Icon type=\"uf-caven\"></Icon>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item active>\r\n\t\t\t\t\t<Icon type=\"uf-cart-o\"></Icon>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t</Breadcrumb>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 使用Icon图标组件。" }, { "example": _react2['default'].createElement(Demo3, null), "title": " 图标加文字 ", "code": "/**\r\n * @title 图标加文字 \r\n * @description 图标放在文字前面。\r\n */\r\n\r\nimport React, { Component } from 'react';\r\n\nimport { Breadcrumb, Icon } from 'tinper-bee';\r\n\r\nclass Demo2 extends Component {\r\n\trender () {\r\n\t\treturn (\r\n\t\t\t<Breadcrumb>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n                    <Icon type=\"uf-home\"></Icon>\r\n                    <span>Home</span>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item href=\"#\">\r\n                    <Icon type=\"uf-caven\"></Icon>\r\n                    <span>Library</span>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t    <Breadcrumb.Item active>\r\n                    <Icon type=\"uf-cart-o\"></Icon>\r\n\t\t\t        <span>Cart</span>\r\n\t\t\t    </Breadcrumb.Item>\r\n\t\t\t</Breadcrumb>\r\n\t\t)\r\n\t}\r\n}\r\n\r\n", "desc": " 图标放在文字前面。" }];
 	
 	var Demo = function (_Component) {
 	    _inherits(Demo, _Component);
@@ -8263,8 +8263,8 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @title 带有图标的 
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description 图标放在文字前面。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @title 图标 
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description 使用Icon图标组件。
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	var Demo2 = function (_Component) {
@@ -8288,17 +8288,12 @@
 				_react2['default'].createElement(
 					_src2['default'].Item,
 					{ href: '#' },
-					_react2['default'].createElement(_beeIcon2['default'], { type: 'uf-caven' }),
-					_react2['default'].createElement(
-						'span',
-						null,
-						'Application List'
-					)
+					_react2['default'].createElement(_beeIcon2['default'], { type: 'uf-caven' })
 				),
 				_react2['default'].createElement(
 					_src2['default'].Item,
 					{ active: true },
-					'Data'
+					_react2['default'].createElement(_beeIcon2['default'], { type: 'uf-cart-o' })
 				)
 			);
 		};
@@ -8405,6 +8400,93 @@
 	Icon.propTypes = propTypes;
 	
 	exports["default"] = Icon;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _beeIcon = __webpack_require__(89);
+	
+	var _beeIcon2 = _interopRequireDefault(_beeIcon);
+	
+	var _src = __webpack_require__(85);
+	
+	var _src2 = _interopRequireDefault(_src);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @title 图标加文字 
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @description 图标放在文字前面。
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	
+	var Demo2 = function (_Component) {
+		_inherits(Demo2, _Component);
+	
+		function Demo2() {
+			_classCallCheck(this, Demo2);
+	
+			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+		}
+	
+		Demo2.prototype.render = function render() {
+			return _react2['default'].createElement(
+				_src2['default'],
+				null,
+				_react2['default'].createElement(
+					_src2['default'].Item,
+					{ href: '#' },
+					_react2['default'].createElement(_beeIcon2['default'], { type: 'uf-home' }),
+					_react2['default'].createElement(
+						'span',
+						null,
+						'Home'
+					)
+				),
+				_react2['default'].createElement(
+					_src2['default'].Item,
+					{ href: '#' },
+					_react2['default'].createElement(_beeIcon2['default'], { type: 'uf-caven' }),
+					_react2['default'].createElement(
+						'span',
+						null,
+						'Library'
+					)
+				),
+				_react2['default'].createElement(
+					_src2['default'].Item,
+					{ active: true },
+					_react2['default'].createElement(_beeIcon2['default'], { type: 'uf-cart-o' }),
+					_react2['default'].createElement(
+						'span',
+						null,
+						'Cart'
+					)
+				)
+			);
+		};
+	
+		return Demo2;
+	}(_react.Component);
+	
+	exports['default'] = Demo2;
 	module.exports = exports['default'];
 
 /***/ })
